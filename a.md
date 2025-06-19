@@ -1,1 +1,1 @@
-checking if commiting from arch is possible 
+hecking if commiting from arch is possible
