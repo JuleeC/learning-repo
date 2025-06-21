@@ -17,10 +17,15 @@ var (
 	e bool
 	f string
 )
+//or
+var x,y,z int
 
+//for decalring floats you need to use either float32 or float64
+var f_value float32 = 3.14231
 func main()  {
 	fmt.Printf("Hello World")
 	fmt.Printf("testing if commiting works")
+	fmt.Printf(f_value)
 	//it is not necessary to declare a type
 	//you can do this also but only in a function
 	a1 := 10
