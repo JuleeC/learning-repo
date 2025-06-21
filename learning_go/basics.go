@@ -29,6 +29,7 @@ var s string = "hello"
 
 //Runes is int32 and it used for iterating over characters in a string
 //go has support for complex numbers
+// we can assume that errrors are a type just like ints and floats
 func main()  {
 	fmt.Printf("Hello World")
 	fmt.Printf("testing if commiting works")
