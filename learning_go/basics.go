@@ -27,6 +27,8 @@ var f_value float32 = 3.14231
 var s string = "hello"
 // s[0] = 'a' is not working
 
+//Runes is int32 and it used for iterating over characters in a string
+//go has support for complex numbers
 func main()  {
 	fmt.Printf("Hello World")
 	fmt.Printf("testing if commiting works")
