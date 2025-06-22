@@ -49,7 +49,17 @@ func main()  {
 	if err := doSomething(); err != 0 {
 		fmt.Printf("value")
 	}
+	//goto is used to jump to a label
+
 }
+func label_goto_example()  {
+	i := 0
+	Here:
+  	fmt.Println(i)		
+		i++
+		goto Here
+	}
+
 func doSomething()return int32{
 	return 10
 }
