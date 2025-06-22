@@ -83,6 +83,14 @@ func main()  {
 			default:
 				fmt.Printf("a1 is equal to 10\n")
 			}
+			//also a varient
+			switch a1 {
+				case 0,1:
+					fmt.Printf("a1 is 0 or 1\n")
+				default:
+					fallthrough
+				}
+
 }
 
 //goto is used to jump to a label
