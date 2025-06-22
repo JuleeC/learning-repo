@@ -31,19 +31,19 @@ var s string = "hello"
 //go has support for complex numbers
 // we can assume that errrors are a type just like ints and floats
 func main()  {
-	fmt.Printf("Hello World")
-	fmt.Printf("testing if commiting works")
+	fmt.Printf("Hello World\n")
+	fmt.Printf("testing if commiting works\n")
 	//it is not necessary to declare a type
 	//you can do this also but only in a function
 	a1 := 10
-	b2 := true
-	c3 := "hello"
+//	b2 := true
+//	c3 := "hello"
 
 	// if statements
 	if a1 > 10 {
-		fmt.Printf("a1 is greater than 10")
+		fmt.Printf("a1 is greater than 10\n")
 	} else {
-		fmt.Printf("a1 is less than 10")
+		fmt.Printf("a1 is less than 10\n")
 	}
 	//if and switch statements can have an initalization
 	if err := doSomething(); err != 0 {
@@ -77,7 +77,7 @@ func label_goto_example()  {
 		goto Here
 	}
 
-func doSomething()return int32{
+func doSomething() int32 {
 	return 10
 }
 
