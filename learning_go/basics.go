@@ -71,6 +71,16 @@ func main()  {
 			for k, v := range list {
 				fmt.Printf("k is %d and v is %d \n", k, v)
 			}
+			//switch is used to compare a value against a list of values
+			switch {
+			case a1 > 10:
+				fmt.Printf("a1 is greater than 10\n")
+			case a1 < 10:
+				fmt.Printf("a1 is less than 10\n")
+				//default is used if none of the cases match
+			default:
+				fmt.Printf("a1 is equal to 10\n")
+			}
 }
 
 //goto is used to jump to a label
