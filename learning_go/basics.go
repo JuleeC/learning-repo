@@ -42,7 +42,7 @@ func main()  {
 	// if statements
 	if a1 > 10 {
 		fmt.Printf("a1 is greater than 10")
-	 else {
+	} else {
 		fmt.Printf("a1 is less than 10")
 	}
 	//if and switch statements can have an initalization
@@ -53,6 +53,17 @@ func main()  {
 	// for init; condition; post 
 	// for condition
 	// for {} --endless loop
+
+	// with break you can break out of a loop
+	// we can break also labels
+	J: for i := 0; i < 10; i++ {
+			for j := 0; j < 10; j++ {
+					if j == 5 {
+						break J
+					}
+					fmt.Printf("i is %d and j is %d\n", i, j)
+					}
+			}
 
 }
 
