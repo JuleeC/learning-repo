@@ -87,8 +87,6 @@ func main()  {
 			switch a1 {
 				case 0,1:
 					fmt.Printf("a1 is 0 or 1\n")
-				default:
-					fallthrough
 				}
 
 }
