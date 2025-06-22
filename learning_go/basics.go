@@ -77,6 +77,8 @@ func main()  {
 				fmt.Printf("a1 is greater than 10\n")
 			case a1 < 10:
 				fmt.Printf("a1 is less than 10\n")
+				//if we want to skip a case we can use fallthrough
+			case a1 == 10: fallthrough
 				//default is used if none of the cases match
 			default:
 				fmt.Printf("a1 is equal to 10\n")
