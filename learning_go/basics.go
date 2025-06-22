@@ -38,4 +38,23 @@ func main()  {
 	a1 := 10
 	b2 := true
 	c3 := "hello"
+
+	// if statements
+	if a1 > 10 {
+		fmt.Printf("a1 is greater than 10")
+	 else {
+		fmt.Printf("a1 is less than 10")
+	}
+	//if and switch statements can have an initalization
+	if err := doSomething(); err != 0 {
+		fmt.Printf("value")
+	}
 }
+func doSomething()return int32{
+	return 10
+}
+
+
+
+
+
