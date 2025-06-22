@@ -64,6 +64,7 @@ func main()  {
 					fmt.Printf("i is %d and j is %d\n", i, j)
 					}
 			}
+			// continue is used to skip the rest of the loop and works also with labels
 
 }
 
