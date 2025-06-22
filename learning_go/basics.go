@@ -49,9 +49,14 @@ func main()  {
 	if err := doSomething(); err != 0 {
 		fmt.Printf("value")
 	}
-	//goto is used to jump to a label
+	//go uses 3 types if loops
+	// for init; condition; post 
+	// for condition
+	// for {} --endless loop
 
 }
+
+//goto is used to jump to a label
 func label_goto_example()  {
 	i := 0
 	Here:
