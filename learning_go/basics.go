@@ -67,9 +67,9 @@ func main()  {
 			// continue is used to skip the rest of the loop and works also with labels
 
 			// range is used to iterate over arrays and slices
-			list := []char{'a', 'b', 'c'}
+			list := []string {"a", "b", "c"}
 			for k, v := range list {
-				fmt.Printf("k is %d and v is %c\n", k, v)
+				fmt.Printf("k is %d and v is %d \n", k, v)
 			}
 }
 
