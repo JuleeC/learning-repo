@@ -99,13 +99,13 @@ func main()  {
 				arr3 := [...]int{1,2,3}
 				//the dots means that the array can be of any size
 				//2d arrays
-				var arr2d [3][3]int {{1,2,3},{4,5,6},{7,8,9}}
+				var arr2d= [3][3]int{{1,2,3},{4,5,6},{7,8,9}}
 
 				//slices
 				// they are similar to arrays but they dont have a size that means they can grow
 				slice := make([]int,10)
 				//this slice can contain 10 values
-				abcde := [...]int{1, 2, 3, 4, 5} 1
+				abcde := [...]int{1, 2, 3, 4, 5} 
 				s1 := abcde[2:4] 
 				s2 := abcde[1:5] 
 				s3 := abcde[:]   
@@ -120,7 +120,7 @@ func main()  {
 				slice = append(slice, slice...)
 				fmt.Printf("slice is %v\n", slice)
 
-}
+			}
 
 //goto is used to jump to a label
 func label_goto_example()  {
