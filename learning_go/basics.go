@@ -103,6 +103,16 @@ func main()  {
 
 				//slices
 				// they are similar to arrays but they dont have a size that means they can grow
+				slice := make([]int,10)
+				//this slice can contain 10 values
+				abcde := [...]int{1, 2, 3, 4, 5} 1
+				s1 := abcde[2:4] 
+				s2 := abcde[1:5] 
+				s3 := abcde[:]   
+				s4 := abcde[:4]  
+				s5 := s2[:] 
+				s6 := abcde[1:3] 
+
 }
 
 //goto is used to jump to a label
