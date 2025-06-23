@@ -112,6 +112,13 @@ func main()  {
 				s4 := abcde[:4]  
 				s5 := s2[:] 
 				s6 := abcde[1:3] 
+				// when we try to assign a value to a slice but with an index that is out of bounds we get an error
+				//if we want to append something to a slice we can use append
+
+				slice = append(slice, 10)
+				//but if we want to append a slice with a sclice we need to use three dots after the second slice call
+				slice = append(slice, slice...)
+				fmt.Printf("slice is %v\n", slice)
 
 }
 
