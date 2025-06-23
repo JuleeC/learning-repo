@@ -92,8 +92,8 @@ func main()  {
 				var arr [3]int
 				arr[0] = 1
 				arr[1] = 2
-				c
 
+				//arrays are values so if you assign another array to it it copies the values and it will be the same array
 }
 
 //goto is used to jump to a label
