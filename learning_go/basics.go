@@ -100,6 +100,9 @@ func main()  {
 				//the dots means that the array can be of any size
 				//2d arrays
 				var arr2d [3][3]int {{1,2,3},{4,5,6},{7,8,9}}
+
+				//slices
+				// they are similar to arrays but they dont have a size that means they can grow
 }
 
 //goto is used to jump to a label
