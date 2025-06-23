@@ -92,8 +92,12 @@ func main()  {
 				var arr [3]int
 				arr[0] = 1
 				arr[1] = 2
-
 				//arrays are values so if you assign another array to it it copies the values and it will be the same array
+				//shorter form:
+				arr2 := [3]int{1,2,3}
+				//or
+				arr3 := [...]int{1,2,3}
+				//the dots means that the array can be of any size
 }
 
 //goto is used to jump to a label
