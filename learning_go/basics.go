@@ -88,6 +88,11 @@ func main()  {
 				case 0,1:
 					fmt.Printf("a1 is 0 or 1\n")
 				}
+				//arrays
+				var arr [3]int
+				arr[0] = 1
+				arr[1] = 2
+				c
 
 }
 
