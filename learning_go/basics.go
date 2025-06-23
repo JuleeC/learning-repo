@@ -98,6 +98,8 @@ func main()  {
 				//or
 				arr3 := [...]int{1,2,3}
 				//the dots means that the array can be of any size
+				//2d arrays
+				var arr2d [3][3]int {{1,2,3},{4,5,6},{7,8,9}}
 }
 
 //goto is used to jump to a label
