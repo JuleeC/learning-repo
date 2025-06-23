@@ -33,7 +33,7 @@ var s string = "hello"
 func main()  {
 	fmt.Printf("Hello World\n")
 	fmt.Printf("testing if commiting works\n")
-	//it is not necessary to declare a type
+	//it is n:ot necessary to declare a type
 	//you can do this also but only in a function
 	a1 := 10
 //	b2 := true
