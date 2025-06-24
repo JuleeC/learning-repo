@@ -119,6 +119,23 @@ func main()  {
 				//but if we want to append a slice with a sclice we need to use three dots after the second slice call
 				slice = append(slice, slice...)
 				fmt.Printf("slice is %v\n", slice)
+				
+				//maps
+				// example of a map
+				monthdays := map[string]int{"january":31,
+				"february":28,
+				"march":31,
+				"april":30,
+				"may":31,
+				"june":30,
+				"july":31,
+				"august":31,
+				"september":30,
+				"october":31,
+				"november":30,
+				"december":31}
+
+
 
 			}
 
