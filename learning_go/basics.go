@@ -121,7 +121,8 @@ func main()  {
 				fmt.Printf("slice is %v\n", slice)
 				
 				//maps
-				// example of a map
+				//a map is a collection of key value pairs
+				// example of a map with string keys and int values
 				monthdays := map[string]int{"january":31,
 				"february":28,
 				"march":31,
