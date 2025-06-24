@@ -148,6 +148,16 @@ func main()  {
 
 					//exercise:
 					//write code to calculate the average of a float64 slice
+					sum := 0.0
+					switch len(xs) {
+						case 0: 
+						avg = 0
+						default: 
+						for _, v := range xs {
+							sum += v
+						}
+						avg = sum / float64(len(xs)) 
+}
 
 
 			}
