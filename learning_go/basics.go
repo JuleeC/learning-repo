@@ -121,6 +121,8 @@ func main()  {
 				fmt.Printf("slice is %v\n", slice)
 				
 				//maps
+				// if we want to search for a value in a map we can use the key
+				//example = monthdays["january"]
 				//a map is a collection of key value pairs
 				// example of a map with string keys and int values
 				monthdays := map[string]int{"january":31,
