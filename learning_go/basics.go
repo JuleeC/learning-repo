@@ -146,6 +146,8 @@ func main()  {
 					// when we want to delete a key value pair we can use delete
 					// if we want to add a element to the map we can use for example monthdays["idk"] = 31
 
+					//exercise:
+					//write code to calculate the average of a float64 slice
 
 
 			}
