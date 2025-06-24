@@ -137,11 +137,12 @@ func main()  {
 				"october":31,
 				"november":30,
 				"december":31}
-				
+			var year int	
 				//example for searching through a map
 				for _, v := range monthdays {
-					fmt.Printf("month is %s and days is %d\n", v.key, v.value)
+						year += v	
 					}
+					fmt.Printf("%d\n",v)
 
 
 
