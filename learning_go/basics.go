@@ -137,6 +137,11 @@ func main()  {
 				"october":31,
 				"november":30,
 				"december":31}
+				
+				//example for searching through a map
+				for _, v := range monthdays {
+					fmt.Printf("month is %s and days is %d\n", v.key, v.value)
+					}
 
 
 
