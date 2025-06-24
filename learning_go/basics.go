@@ -169,11 +169,13 @@ func label_goto_example()  {
   	fmt.Println(i)		
 		i++
 		goto Here
+	
 	}
 
 func doSomething() int32 {
 	return 10
 }
+
 
 
 
