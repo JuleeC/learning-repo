@@ -19,9 +19,15 @@ func main() {
 	fmt.Println("Hello World!")
   r2 := rec(10)
 	fmt.Printf("%v",r2)
+	r3 := func(i int ) {
+		if i == 0 {
+			fmt.Println("done")
+		}
+	}
+	r3(55)
 }
 func rec(n int) int {
-	if n == 0 {
+	if n == 4 {
 		return 1
 	}
 	//recursion
