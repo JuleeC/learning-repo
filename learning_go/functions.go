@@ -9,3 +9,11 @@ import (
 func main() {
 	fmt.Println("Hello World!")
 }
+func rec(n int) int {
+	if n == 0 {
+		return 1
+	}
+	rec(n - 1)
+	return 0
+
+}
