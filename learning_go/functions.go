@@ -11,6 +11,8 @@ import (
 // vars that are declared outisde of a function are global
 // vars that are declared inside a function are local
 
+var r int
+var r1 bool
 
 func main() {
 	fmt.Println("Hello World!")
