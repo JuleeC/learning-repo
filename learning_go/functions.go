@@ -14,8 +14,11 @@ import (
 var r int
 var r1 bool
 
+//we can assign the value of a function to a variable
 func main() {
 	fmt.Println("Hello World!")
+  r2 := rec(10)
+	fmt.Printf("%v",r2)
 }
 func rec(n int) int {
 	if n == 0 {
