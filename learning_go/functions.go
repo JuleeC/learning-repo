@@ -18,7 +18,7 @@ var r1 bool
 func main() {
 	fmt.Println("Hello World!")
   r2 := rec(10)
-	fmt.Printf("%v",r2)
+	fmt.Printf("%v\n",r2)
 	r3 := func(i int ) {
 		if i == 0 {
 			fmt.Println("done")
