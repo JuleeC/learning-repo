@@ -58,6 +58,7 @@ func defertest(i int) bool {
 func fm() (ret int) {
 	defer func() {
 		ret++
+		fmt.Println("defer")
 	}()
 	return 0
 }
