@@ -44,6 +44,7 @@ func main() {
 
 // deferred code is executed after the function returns
 // after returning anything the defer code is executed
+// if many things are deferred, the defer code is executed in the reverse order. its like a stack
 func defertest(i int) bool {
 	defer fmt.Println("defer")
 	if i == 0 {
