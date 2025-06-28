@@ -53,6 +53,15 @@ func defertest(i int) bool {
 	return true
 }
 
+// we can also defer a function
+// the output isnt 0, its 1
+func fm() (ret int) {
+	defer func() {
+		ret++
+	}()
+	return 0
+}
+
 func rec(n int) int {
 	if n == 4 {
 		return 1
