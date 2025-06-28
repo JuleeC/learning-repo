@@ -43,8 +43,12 @@ func main() {
 }
 
 // deferred code is executed after the function returns
-func defertest() bool {
+// after returning anything the defer code is executed
+func defertest(i int) bool {
 	defer fmt.Println("defer")
+	if i == 0 {
+		return false
+	}
 	return true
 }
 
