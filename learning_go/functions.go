@@ -33,6 +33,14 @@ func main() {
 	}
 	fmt.Printf("%v\n",xs[1]())
 
+
+	func ()callback(y int, f func(int)) {
+    f(y)
+}
+
+
+	//because functions are values we can pass them as arguments and use them as callbacks
+
 }
 func rec(n int) int {
 	if n == 4 {
