@@ -62,6 +62,13 @@ func Panic(f func()) (b bool) {
 	return
 }
 
+// we can now use the function:
+// this function  triggers a runtime error becuase we are trying to access a non existing element
+func panicy() {
+	var a []int
+	a[3] = 5
+}
+
 // deferred code is executed after the function returns
 // after returning anything the defer code is executed
 // if many things are deferred, the defer code is executed in the reverse order. its like a stack
