@@ -50,6 +50,18 @@ func main() {
 	// myfunc(arg...) but this works too myfunc(1,2,3,4)
 }
 
+// go doesnt have a exception handling mechanism, it uses panic and recover, you should use them as last resort
+// this function checks if the function panics and if it does it returns true
+func Panic(f func()) (b bool) {
+	defer func() {
+		if x := recover(); x != nil {
+			b = true
+		}
+	}()
+	f()
+	return
+}
+
 // deferred code is executed after the function returns
 // after returning anything the defer code is executed
 // if many things are deferred, the defer code is executed in the reverse order. its like a stack
