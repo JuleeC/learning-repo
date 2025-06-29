@@ -45,6 +45,8 @@ func main() {
 	// func myfunc(args ...int) {}
 	// if we want to it iterate over the arguments we can use a for loop
 	// for _, v := range args {}
+	// when we pass a variadic argument to a function we can use the ... operator
+	// slice tricks also works with variadic arguments
 }
 
 // deferred code is executed after the function returns
