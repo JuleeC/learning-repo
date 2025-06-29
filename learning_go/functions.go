@@ -69,6 +69,20 @@ func panicy() {
 	a[3] = 5
 }
 
+// exercise: write a function that calculates the average of a slice of floats
+func average(slice []float64) (average float64) {
+	sum := 0.0
+	if len(slice) == 0 {
+		average = 0
+	} else {
+		for _, v := range slice {
+			sum += v
+		}
+		average = sum / float64(len(slice))
+	}
+	return
+}
+
 // deferred code is executed after the function returns
 // after returning anything the defer code is executed
 // if many things are deferred, the defer code is executed in the reverse order. its like a stack
