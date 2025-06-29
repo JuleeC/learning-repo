@@ -40,6 +40,11 @@ func main() {
 	//func callback(y int, f func(int)) {
 	//  f(y)
 	//}
+
+	// variadic arguments are used to pass a variable number of arguments to a function
+	// func myfunc(args ...int) {}
+	// if we want to it iterate over the arguments we can use a for loop
+	// for _, v := range args {}
 }
 
 // deferred code is executed after the function returns
