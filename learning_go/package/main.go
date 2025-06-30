@@ -9,6 +9,8 @@ import (
 // capital letter = gloabl scope
 // small letter = local scope
 // underscore = local scope
+// go want to use CamelCase over words with underscores
+// go packaage names are lowercase
 func main() {
 	fmt.Println("packages")
 	fmt.Println(even.Even(2))
