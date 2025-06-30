@@ -11,9 +11,12 @@ import (
 // underscore = local scope
 // go want to use CamelCase over words with underscores
 // go packaage names are lowercase
+// writing go test is customary and should be done
+// go test
 func main() {
+	i := 10
 	fmt.Println("packages")
-	fmt.Println(even.Even(2))
+	fmt.Printf("is %d  even? %v", i, even.Even(i))
 	// this doesnt work because odd is not in the packages scope
 	// fmt.Println(even.odd(2))
 }
