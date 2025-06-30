@@ -1,3 +1,5 @@
+// This package implements even and odd functions (only for ints)
+
 package even
 
 func Even(n int) bool {
