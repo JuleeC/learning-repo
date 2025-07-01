@@ -25,4 +25,8 @@ func main() {
 	a := new(bar)
 	a.a = 10
 	a.b = "hello"
+	fmt.Println("%v\n", a.a)
+	fmt.Println("%s\n", a.b)
+	// or if you want to print the whole object
+	fmt.Println("%v\n", a)
 }
