@@ -31,6 +31,11 @@ func main() {
 	fmt.Println("%s\n", a.b)
 	// or if you want to print the whole object
 	fmt.Println("%v\n", a)
+	// we can call the methods like this
+	var a1 *bar
+	a1.doSomething(10)
+	// or like this
+	doS(10, a1)
 }
 func (b *bar) doSomething(i int) {}
 
