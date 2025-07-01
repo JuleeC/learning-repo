@@ -21,4 +21,8 @@ type bar struct {
 
 func main() {
 	fmt.Println("beyond the basics")
+	// creating a object
+	a := new(bar)
+	a.a = 10
+	a.b = "hello"
 }
