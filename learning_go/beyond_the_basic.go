@@ -32,6 +32,7 @@ func main() {
 	// or if you want to print the whole object
 	fmt.Println("%v\n", a)
 	// we can call the methods like this
+	// if we dont point to bar, its fine because go handles the pointer afterwards for us
 	var a1 *bar
 	a1.doSomething(10)
 	// or like this
