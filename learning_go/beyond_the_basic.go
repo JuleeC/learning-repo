@@ -10,6 +10,15 @@ import (
 // go has a garbage collector that frees up memory that is no longer in use
 // but you can also manually free up memory with the free function or make  function
 // sometimes zero values isnt good enough so initializing a constructor is a good idea
+// go allows you to define your own types
+type foo int
+
+// creating more sophisticated types
+type bar struct {
+	a int
+	b string
+}
+
 func main() {
 	fmt.Println("beyond the basics")
 }
