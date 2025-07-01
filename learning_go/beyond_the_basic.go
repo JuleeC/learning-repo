@@ -14,6 +14,8 @@ import (
 type foo int
 
 // creating more sophisticated types
+// each item in a struct is called a field
+// field names can also be exported
 type bar struct {
 	a int
 	b string
