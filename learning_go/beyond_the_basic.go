@@ -32,3 +32,7 @@ func main() {
 	// or if you want to print the whole object
 	fmt.Println("%v\n", a)
 }
+func (b *bar) doSomething(i int) {}
+
+// its the same
+func doS(i int, b *bar) {}
