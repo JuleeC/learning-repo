@@ -47,6 +47,12 @@ func main() {
 	type PrintableMutex struct{ Mutex }
 	// but printablemutex has all the methods of the mutex type
 	// in go its called embedding
+	var m *PrintableMutex
+	m.Lock()
+	// this works because PrintableMutex is embedded in Mutex
+	// var m1 *NewMutex
+	// m1.Lock()
+	// this doesnt work because NewMutex is not embedded in Mutex
 }
 func (b *bar) doSomething(i int) {}
 
