@@ -59,6 +59,8 @@ func main() {
 	// we create a slice of bytes containing the bytes of the string
 	b := []byte(s)
 	fmt.Println(b)
+	r := string(b)
+	fmt.Println(r)
 }
 func (b *bar) doSomething(i int) {}
 
