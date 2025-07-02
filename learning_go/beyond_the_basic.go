@@ -20,6 +20,10 @@ type bar struct {
 	a int
 	b string
 }
+type Mutex struct{}
+
+func (m *Mutex) Lock()   {}
+func (m *Mutex) Unlock() {}
 
 func main() {
 	fmt.Println("beyond the basics")
