@@ -64,6 +64,10 @@ func main() {
 	// casting between own types
 	type foo struct{ int }
 	type bar foo // bar is an alias for foo
+	// var b bar = bar{1}
+	// var f foo = b
+	// this fails but we can do this
+	// var f foo = foo(b)
 }
 func (b *bar) doSomething(i int) {}
 
