@@ -53,6 +53,12 @@ func main() {
 	// var m1 *NewMutex
 	// m1.Lock()
 	// this doesnt work because NewMutex is not embedded in Mutex
+
+	// if we want to convert a string to a slice of bytes/runes
+	s := "hello"
+	// we create a slice of bytes containing the bytes of the string
+	b := []byte(s)
+	fmt.Println(b)
 }
 func (b *bar) doSomething(i int) {}
 
