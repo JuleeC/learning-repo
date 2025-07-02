@@ -41,6 +41,9 @@ func main() {
 	a1.doSomething(10)
 	// or like this
 	doS(10, a1)
+	// mutex struct exmaple
+	type NewMutex Mutex // we can create a new type from an existing type
+	type PrintableMutex struct{ Mutex }
 }
 func (b *bar) doSomething(i int) {}
 
