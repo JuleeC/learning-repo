@@ -61,6 +61,9 @@ func main() {
 	fmt.Println(b)
 	r := string(b)
 	fmt.Println(r)
+	// casting between own types
+	type foo struct{ int }
+	type bar foo // bar is an alias for foo
 }
 func (b *bar) doSomething(i int) {}
 
