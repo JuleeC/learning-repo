@@ -43,7 +43,10 @@ func main() {
 	doS(10, a1)
 	// mutex struct exmaple
 	type NewMutex Mutex // we can create a new type from an existing type
+	// newmutex is the same as mutex but it doenst have any methods of the mutex type
 	type PrintableMutex struct{ Mutex }
+	// but printablemutex has all the methods of the mutex type
+	// in go its called embedding
 }
 func (b *bar) doSomething(i int) {}
 
