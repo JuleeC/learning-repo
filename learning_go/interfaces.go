@@ -42,4 +42,11 @@ type I interface {
 func f1(p I) {
 	fmt.Println(p.Get())
 	p.Set(10)
+	switch t := p.(type) {
+	case *S:
+		fmt.Println(t.Get())
+	case *R:
+		fmt.Println(t.Get())
+
+	}
 }
