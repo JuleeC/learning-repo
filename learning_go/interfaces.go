@@ -42,6 +42,8 @@ type I interface {
 func f1(p I) {
 	fmt.Println(p.Get())
 	p.Set(10)
+	// we can only use .type in a switch statement
+	// we can also use a type assertion to check if the type is the same
 	switch t := p.(type) {
 	case *S:
 		fmt.Println(t.Get())
