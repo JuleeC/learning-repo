@@ -19,3 +19,14 @@ func (s S) Get() int {
 func (s S) Set(i int) {
 	s.i = i
 }
+
+// we can also define a interface with a set of methods
+type I interface {
+	Get() int
+	Set(int)
+}
+
+func f1(p I) {
+	fmt.Println(p.Get())
+	p.Set(10)
+}
