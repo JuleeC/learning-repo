@@ -6,7 +6,8 @@ import "fmt"
 // a interface has a set of methods that is defined by a type
 func main() {
 	fmt.Println("interfaces")
-	f1(I(S{10}))
+	f1(&S{10})
+	f1(&R{10})
 }
 
 type S struct {
@@ -16,12 +17,12 @@ type R struct {
 	i int
 }
 
-func (s *R) Get() int {
-	return s.i
+func (p *R) Get() int {
+	return p.i
 }
 
-func (s *R) Set(i int) {
-	s.i = i
+func (p *R) Set(i int) {
+	p.i = i
 }
 
 func (s *S) Get() int {
