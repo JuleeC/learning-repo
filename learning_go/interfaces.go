@@ -6,7 +6,7 @@ import "fmt"
 // a interface has a set of methods that is defined by a type
 func main() {
 	fmt.Println("interfaces")
-	//	f1(&S{10})
+	f1(&S{10})
 	f1(&R{9})
 }
 
@@ -49,6 +49,9 @@ func f1(p I) {
 		fmt.Println(t.Get())
 	case *R:
 		fmt.Println(t.Get())
-
+	}
+	// we can also use a if statement to see i f an interface is a certain type
+	if t, ok := p.(I); ok {
+		fmt.Println(t.Get())
 	}
 }
