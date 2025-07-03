@@ -7,3 +7,15 @@ import "fmt"
 func main() {
 	fmt.Println("interfaces")
 }
+
+type S struct {
+	i int
+}
+
+func (s S) Get() int {
+	return s.i
+}
+
+func (s S) Set(i int) {
+	s.i = i
+}
