@@ -100,6 +100,18 @@ fn hello_world() {
 }
 //need to import the trait
 use std::fmt;
+
 fn display() {
     println!("display");
+    // Define a structure for which `fmt::Display` will be implemented. This is
+    // a tuple struct named `Structure` that contains an `i32`.
+    struct Structure(i32);
+    let x = Structure(3);
+    println!("{}", x);
+    impl fmt::Display for Structure {
+        //this trait requires fmt with this exact signature
+        fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+            write!(f, "Structure({})", self.0)
+        }
+    }
 }
