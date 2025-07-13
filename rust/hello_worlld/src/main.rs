@@ -14,6 +14,7 @@ fn debugging() {
     //println!("{:?}", UnPrintableStruct(3));
 
     #[derive(Debug)]
+    #[allow(dead_code)] // disable `dead_code` which warn against unused module
     struct PrintableStruct(i32);
     let x = PrintableStruct(3);
     //the same as println!("{:?}", x);
@@ -26,15 +27,16 @@ fn debugging() {
         age: u8,
     }
 
-    fn main() {
-        let name = "Peter";
-        let age = 27;
-        let peter = Person { name, age };
+    let name = "Peter";
+    let age = 27;
+    let peter = Person { name, age };
 
-        // Pretty print
-        println!("{:#?}", peter);
-    }
+    // Pretty print
+    println!("{:#?}", peter);
+    println!("{0}", name);
+    println!("{0}", age);
 }
+
 fn hello_world() {
     // In general, the `{}` will be automatically replaced with any
     // arguments. These will be stringified.
