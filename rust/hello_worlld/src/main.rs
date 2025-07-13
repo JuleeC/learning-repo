@@ -21,20 +21,20 @@ fn debugging() {
     println!("{:?}", PrintableStruct(3));
     println!("{:?}", x);
 
-    #[derive(Debug)]
-    struct Person<'a> {
-        name: &'a str,
-        age: u8,
-    }
-
-    let name = "Peter";
-    let age = 27;
-    let peter = Person { name, age };
+    //    #[derive(Debug)]
+    //    struct Person<'a> {
+    //        name: &'a str,
+    //        age: u8,
+    //    }
+    //
+    //  let name = "Peter";
+    // let age = 27;
+    //let peter = Person { name, age };
 
     // Pretty print
-    println!("{:#?}", peter);
-    println!("{0}", name);
-    println!("{0}", age);
+    // println!("{:#?}", peter);
+    // println!("{0}", name);
+    //  println!("{0}", age);
 }
 
 fn hello_world() {
