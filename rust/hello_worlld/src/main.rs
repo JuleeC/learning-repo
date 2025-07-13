@@ -6,6 +6,7 @@
 fn main() {
     hello_world();
     debugging();
+    display();
 }
 fn debugging() {
     println!("debugging");
@@ -96,4 +97,9 @@ fn hello_world() {
     let width: usize = 5;
     println!("{number:>width$}");
     println!("Hello World!");
+}
+//need to import the trait
+use std::fmt;
+fn display() {
+    println!("display");
 }
