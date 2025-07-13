@@ -9,9 +9,31 @@ fn main() {
 }
 fn debugging() {
     println!("debugging");
-    struct UnPrintableStruct(i32);
+    //struct UnPrintableStruct(i32);
+    //we cant print this struct because it doesnt implement the Display trait
+    //println!("{:?}", UnPrintableStruct(3));
+
     #[derive(Debug)]
     struct PrintableStruct(i32);
+    let x = PrintableStruct(3);
+    //the same as println!("{:?}", x);
+    println!("{:?}", PrintableStruct(3));
+    println!("{:?}", x);
+
+    #[derive(Debug)]
+    struct Person<'a> {
+        name: &'a str,
+        age: u8,
+    }
+
+    fn main() {
+        let name = "Peter";
+        let age = 27;
+        let peter = Person { name, age };
+
+        // Pretty print
+        println!("{:#?}", peter);
+    }
 }
 fn hello_world() {
     // In general, the `{}` will be automatically replaced with any
