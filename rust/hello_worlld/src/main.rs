@@ -7,6 +7,7 @@ fn main() {
     hello_world();
     debugging();
     display();
+    formatting();
 }
 fn debugging() {
     println!("debugging");
@@ -141,4 +142,7 @@ fn display() {
             write!(f, "x: {}, y: {}", self.x, self.y)
         }
     }
+}
+fn formatting() {
+    println!("formatting");
 }
