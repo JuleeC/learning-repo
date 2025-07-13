@@ -4,6 +4,13 @@
 //    eprint!: same as print! but the text is printed to the standard error (io::stderr).
 //    eprintln!: same as eprint! but a newline is appended.
 fn main() {
+    hello_world();
+    debugging();
+}
+fn debugging() {
+    println!("debugging");
+}
+fn hello_world() {
     // In general, the `{}` will be automatically replaced with any
     // arguments. These will be stringified.
     println!("{} days", 31);
@@ -61,4 +68,5 @@ fn main() {
     let number: f64 = 1.0;
     let width: usize = 5;
     println!("{number:>width$}");
+    println!("Hello World!");
 }
