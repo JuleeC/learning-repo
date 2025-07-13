@@ -9,6 +9,9 @@ fn main() {
 }
 fn debugging() {
     println!("debugging");
+    struct UnPrintableStruct(i32);
+    #[derive(Debug)]
+    struct PrintableStruct(i32);
 }
 fn hello_world() {
     // In general, the `{}` will be automatically replaced with any
