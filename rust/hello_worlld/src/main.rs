@@ -101,7 +101,6 @@ fn hello_world() {
 }
 //need to import the trait
 use std::fmt;
-
 fn display() {
     println!("display");
     // Define a structure for which `fmt::Display` will be implemented. This is
@@ -145,4 +144,39 @@ fn display() {
 }
 fn formatting() {
     println!("formatting");
+    struct City {
+        name: &'static str,
+        // Latitude
+        lat: f32,
+        // Longitude
+        lon: f32,
+    }
+
+    use std::fmt::{Display, Formatter};
+    impl Display for City {
+        // `f` is a buffer, and this method must write the formatted string into it.
+        fn fmt(&self, f: &mut Formatter) -> fmt::Result {
+            let lat_c = if self.lat >= 0.0 { 'N' } else { 'S' };
+            let lon_c = if self.lon >= 0.0 { 'E' } else { 'W' };
+
+            // `write!` is like `format!`, but it will write the formatted string
+            // into a buffer (the first argument).
+            write!(
+                f,
+                "{}: {:.3}°{} {:.3}°{}",
+                self.name,
+                self.lat.abs(),
+                lat_c,
+                self.lon.abs(),
+                lon_c
+            )
+        }
+    }
+
+    #[derive(Debug)]
+    struct Color {
+        red: u8,
+        green: u8,
+        blue: u8,
+    }
 }
