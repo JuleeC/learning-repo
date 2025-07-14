@@ -1,4 +1,8 @@
 fn main() {
+    primitves();
+    literals_and_operators();
+}
+fn primitves() {
     println!("primitves");
     //rust provides a number of primitive types
     //
@@ -47,3 +51,4 @@ fn main() {
     // and is constructed using parentheses ().
     let my_tuple = (5u32, 1u8, true, -5.04f32);
 }
+fn literals_and_operators() {}
