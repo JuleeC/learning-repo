@@ -126,3 +126,9 @@ fn tuples() {
     let matrix = Matrix(1.1, 1.2, 2.1, 2.2);
     println!("{:?}", matrix);
 }
+fn reverse(pair: (i32, bool)) -> (bool, i32) {
+    // `let` can be used to bind the members of a tuple to variables.
+    let (int_param, bool_param) = pair;
+    //return the reversed tuple
+    (bool_param, int_param)
+}
