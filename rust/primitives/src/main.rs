@@ -40,6 +40,8 @@ fn main() {
 
     // Array signature consists of Type T and length as [T; length].
     let my_array: [i32; 5] = [1, 2, 3, 4, 5];
+    // works as well becuase the length is known at compile time.
+    let my_array = [1, 2, 3, 4, 5];
 
     // Tuple is a collection of values of different types
     // and is constructed using parentheses ().
