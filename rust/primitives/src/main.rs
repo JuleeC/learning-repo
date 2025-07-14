@@ -2,6 +2,7 @@ fn main() {
     primitves();
     literals_and_operators();
     tuples();
+    arrays_and_slices();
 }
 fn primitves() {
     println!("primitves");
@@ -133,27 +134,54 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
     (bool_param, int_param)
 }
 fn arrays_and_slices() {
-    // Arrays are fixed length sequences of elements of the same type.
-    // The type of the elements is inferred from the value.
-    let arr = [1, 2, 3, 4, 5];
-    println!("arr is {:?}", arr);
+    use std::mem;
 
-    // Slices are dynamically sized sequences of elements of the same type.
-    let slice = &arr[1..4];
-    println!("slice is {:?}", slice);
+    // Fixed-size array (type signature is superfluous).
+    let xs: [i32; 5] = [1, 2, 3, 4, 5];
 
-    // Slices can be created from arrays.
-    let slice = &arr[..];
-    println!("slice is {:?}", slice);
+    // All elements can be initialized to the same value.
+    let ys: [i32; 500] = [0; 500];
 
-    // Slices can be used to borrow multiple elements from an array.
-    let slice = &arr[1..4];
-    println!("slice is {:?}", slice);
+    // Indexing starts at 0.
+    println!("First element of the array: {}", xs[0]);
+    println!("Second element of the array: {}", xs[1]);
 
-    // Slices can be used to initialize an array.
-    let mut arr = [1, 2, 3, 4, 5];
-    let slice = &mut arr[1..4];
-    slice.reverse();
-    println!("slice is {:?}", slice);
-    println!("arr is {:?}", arr);
-}
+    // `len` returns the count of elements in the array.
+    println!("Number of elements in array: {}", xs.len());
+
+    // Arrays are stack allocated.
+    println!("Array occupies {} bytes", mem::size_of_val(&xs));
+
+    // Arrays can be automatically borrowed as slices.
+    println!("Borrow the whole array as a slice.");
+    analyze_slice(&xs);
+
+    // Slices can point to a section of an array.
+    // They are of the form [starting_index..ending_index].
+    // `starting_index` is the first position in the slice.
+    // `ending_index` is one more than the last position in the slice.
+    println!("Borrow a section of the array as a slice.");
+    analyze_slice(&ys[1..4]);
+
+    // Example of empty slice `&[]`:
+    let empty_array: [u32; 0] = [];
+    assert_eq!(&empty_array, &[]);
+    assert_eq!(&empty_array, &[][..]); // Same but more verbose
+
+    // Arrays can be safely accessed using `.get`, which returns an
+    // `Option`. This can be matched as shown below, or used with
+    // `.expect()` if you would like the program to exit with a nice
+    // message instead of happily continue.
+    for i in 0..xs.len() + 1 {
+        // Oops, one element too far!
+        match xs.get(i) {
+            Some(xval) => println!("{}: {}", i, xval),
+            None => println!("Slow down! {} is too far!", i),
+        }
+    }
+
+    // Out of bound indexing on array with constant value causes compile time error.
+    //println!("{}", xs[5]);
+    // Out of bound indexing on slice causes runtime error.
+    //println!("{}", xs[..][5]);
+} // This function borrows a slice.
