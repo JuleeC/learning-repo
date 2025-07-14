@@ -10,4 +10,5 @@ fn main() {
     /   bool either true or false
     /  The unit type (), whose only possible value is an empty tuple: ()
     */
+    // arrrays like [1,2]and tuples like (1,2)
 }
