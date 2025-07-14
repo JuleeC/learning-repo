@@ -132,3 +132,28 @@ fn reverse(pair: (i32, bool)) -> (bool, i32) {
     //return the reversed tuple
     (bool_param, int_param)
 }
+fn arrays_and_slices() {
+    // Arrays are fixed length sequences of elements of the same type.
+    // The type of the elements is inferred from the value.
+    let arr = [1, 2, 3, 4, 5];
+    println!("arr is {:?}", arr);
+
+    // Slices are dynamically sized sequences of elements of the same type.
+    let slice = &arr[1..4];
+    println!("slice is {:?}", slice);
+
+    // Slices can be created from arrays.
+    let slice = &arr[..];
+    println!("slice is {:?}", slice);
+
+    // Slices can be used to borrow multiple elements from an array.
+    let slice = &arr[1..4];
+    println!("slice is {:?}", slice);
+
+    // Slices can be used to initialize an array.
+    let mut arr = [1, 2, 3, 4, 5];
+    let slice = &mut arr[1..4];
+    slice.reverse();
+    println!("slice is {:?}", slice);
+    println!("arr is {:?}", arr);
+}
